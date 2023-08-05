@@ -96,6 +96,15 @@ share.appendChild(shareLine2);
 
 const cards = document.querySelectorAll('.project-item');
 cards.forEach((card)=> {
+    const paraWrapper = document.createElement('div');
+    paraWrapper.classList.add('paraWrapper');
+
+    const content = document.createElement('p');
+    content.textContent = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatibus mollitia explicabo, illum ratione blanditiis deleniti molestiae praesentium sequi a iure nostrum eius doloremque aperiam esse et repudiandae voluptates accusantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatibus mollitia explicabo, illum ratione blanditiis deleniti molestiae praesentium sequi a iure nostrum eius doloremque aperiam esse et repudiandae voluptates accusantium!'
+    paraWrapper.appendChild(content);
+    card.appendChild(paraWrapper);
+
+
     const wrapper = document.createElement('div');
     wrapper.classList.add('icon-wrapper');
     wrapper.appendChild(star.cloneNode(true));
