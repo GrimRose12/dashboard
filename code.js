@@ -136,3 +136,12 @@ iconWrappers.forEach((iconWrapper) => {
     eyeOn.style.display = 'block';
   });
 });
+
+iconWrappers.forEach((iconWrapper)=>{
+  const starred = iconWrapper.querySelector('.star');
+  console.log(starred);
+  starred.addEventListener('click', ()=>{
+    starred.classList.toggle('pressed');
+    console.log('success');
+  })
+})
