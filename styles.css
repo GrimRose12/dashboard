@@ -156,22 +156,11 @@ input[type="search"]:focus {
     gap: 1rem;
 }
 
-.dropdown-options {
-    display: none;
-    position: absolute;
-    overflow: auto;
-    flex-direction: column;
-
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    background-color: inherit;
-    padding: 10px;
-    font-size: 20px;
-}
 
 .dropdown {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    padding: 5px;
 }
 
 .dropdown:hover {
@@ -182,6 +171,20 @@ input[type="search"]:focus {
 display: flex;
 }
 
+.dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    background-color: inherit;
+    padding: 10px;
+    margin-left: -5px;
+    font-size: 20px;
+}
+
+
 .dropdown-options div {
     border-radius: 5px;
     padding: 10px;
@@ -191,7 +194,15 @@ display: flex;
     background-color: var(--white);
     color: var(--dark-violet)
 }
-    
+
+.profile-name {
+    border-radius: 10px;
+    padding: 0.75rem;
+}
+
+.profile-name:hover {
+    background-color: var(--light-violet);
+}
 
 .profile-picture {
     background: url("./images/background\ 1.29.41\ AM.png");
@@ -273,14 +284,14 @@ display: flex;
 .announcement-header {
     grid-column: 3/4;
     font-size: 1.5rem;
-    text-align: center;
+    
     margin-right: 1rem;
     padding-top: 1.5rem;
 }
 
 .announcements {
     grid-column: 3/4;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-right: 1rem;
     background-color: var(--white);
     border: 1px solid var(--dark-gray);
@@ -291,7 +302,6 @@ display: flex;
 .trending-header {
     grid-column: 3/4;
     font-size: 1.5rem;
-    text-align: center;
     margin-right: 1rem;
     padding-top: 1.5rem;
 
@@ -299,7 +309,7 @@ display: flex;
 
 .trending {
     grid-column: 3/4;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-right: 1rem;
     background-color: var(--white);
     border: 1px solid var(--dark-gray);
