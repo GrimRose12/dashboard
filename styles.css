@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -16,7 +17,6 @@
     --yellow: yellow;
     --gold: gold;
     --blue: skyblue;
-
 }
 
 .wrapper {
@@ -30,6 +30,16 @@
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: var(--dark-violet);
+    color: white;
+}
+
+.bannerLogo {
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    align-items:center;
+    gap: 0.5rem;
 }
 
 
@@ -39,6 +49,7 @@
     grid-row: 2/7;
     display: flex;
     flex-direction: column;
+    
     
     
 }
@@ -75,12 +86,13 @@
     flex: 1;
     display: flex;
     align-items: center;
+
 }
 .search-form {
     color: var(--black);
     display: flex;
     padding: 2px;
-    border: 1px solid currentColor;
+    border: 2px solid var(--dark-gray);
     border-radius: 25px;
     flex: 1;
   }
@@ -95,6 +107,8 @@ input[type="search"] {
     border: 1px solid transparent;
     border-radius: inherit;
     flex: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 input[type="search"]::placeholder {
@@ -112,12 +126,15 @@ button.search {
     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
     cursor: pointer;
     opacity: 0.7;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
  
   }
   
 
 button.search:hover {
     opacity: 1;
+    background-color: var(--light-violet)
   }
 
 
@@ -139,6 +156,43 @@ input[type="search"]:focus {
     gap: 1rem;
 }
 
+.dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    flex-direction: column;
+
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    background-color: inherit;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.dropdown {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.dropdown:hover {
+    background-color: var(--light-violet);
+}
+
+.dropdown:hover .dropdown-options {
+display: flex;
+}
+
+.dropdown-options div {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-options div:hover {
+    background-color: var(--white);
+    color: var(--dark-violet)
+}
+    
+
 .profile-picture {
     background: url("./images/background\ 1.29.41\ AM.png");
     background-size: cover;
@@ -150,8 +204,9 @@ input[type="search"]:focus {
 
 .project-header {
     grid-column: 2/3;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding-left: 10px;
+    padding-top: 10px;
     
 
 }
@@ -182,7 +237,7 @@ input[type="search"]:focus {
     background-color: var(--white);
 }
 
-.project-item:hover {
+.project-item:hover, .announcements:hover, .trending:hover {
     /* background-color: var(--light-violet); */
     border: 2px solid var(--dark-violet);
 }
@@ -192,16 +247,12 @@ input[type="search"]:focus {
     align-self: end;
 }
 
-.star:hover {
-    fill: var(--yellow);
-}
-
-.share:hover {
-    fill: var(--blue);
+.icon:hover {
+    fill: var(--light-violet);
 }
 
 .pressed {
-    fill: var(--gold);
+    fill: var(--violet);
 }
 
 .paraWrapper {
@@ -231,13 +282,18 @@ input[type="search"]:focus {
     grid-column: 3/4;
     margin-top: 1rem;
     margin-right: 1rem;
-    background-color: var(--dark-peach);
-    border: 1px solid black;
+    background-color: var(--white);
+    border: 1px solid var(--dark-gray);
     border-radius: 10px;
+    padding: 1rem;
 }
 
 .trending-header {
     grid-column: 3/4;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-right: 1rem;
+    padding-top: 1.5rem;
 
 }
 
@@ -245,8 +301,9 @@ input[type="search"]:focus {
     grid-column: 3/4;
     margin-top: 1rem;
     margin-right: 1rem;
-    background-color: var(--dark-peach);
-    border: 1px solid black;
+    background-color: var(--white);
+    border: 1px solid var(--dark-gray);
     border-radius: 10px;
+    padding: 1rem;
 }
 
